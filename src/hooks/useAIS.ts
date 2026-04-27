@@ -4,8 +4,8 @@ import { AISStreamService } from '../services/aisStream';
 import { DataDockedService } from '../services/dataDockedService';
 import { useMaritimeStore } from '../store/maritimeStore';
 
-const RELAY_WS  = 'ws://localhost:3100';
-const RELAY_API = 'http://localhost:3100/api/status';
+const RELAY_WS  = import.meta.env.VITE_RELAY_WS_URL  || 'ws://localhost:3100';
+const RELAY_API = import.meta.env.VITE_RELAY_HTTP_URL || 'http://localhost:3100/api/status';
 
 async function relayIsUp(): Promise<boolean> {
   try {
