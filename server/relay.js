@@ -23,7 +23,7 @@ try {
 } catch { /* no .env — rely on real env vars */ }
 
 const API_KEY = process.env.VITE_AISSTREAM_API_KEY || process.env.AISSTREAM_API_KEY;
-const PORT    = Number(process.env.RELAY_PORT) || 3100;
+const PORT    = Number(process.env.PORT) || Number(process.env.RELAY_PORT) || 3100;
 
 if (!API_KEY || API_KEY === 'your_key_here') {
   console.error('[relay] No VITE_AISSTREAM_API_KEY set — exiting');
