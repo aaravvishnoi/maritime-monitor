@@ -1,0 +1,73 @@
+import { Port } from '../types';
+
+export const PORTS: Port[] = [
+  // Asia-Pacific — top throughput
+  { id: 'sha', name: 'Shanghai', country: 'China', countryCode: 'CN', lat: 31.23, lon: 121.47, size: 'major', type: 'commercial', unlocode: 'CNSHA', annualTEU: 47300000, status: 'open' },
+  { id: 'sin', name: 'Singapore', country: 'Singapore', countryCode: 'SG', lat: 1.26, lon: 103.82, size: 'major', type: 'commercial', unlocode: 'SGSIN', annualTEU: 37500000, status: 'open' },
+  { id: 'nbo', name: 'Ningbo-Zhoushan', country: 'China', countryCode: 'CN', lat: 29.87, lon: 121.55, size: 'major', type: 'commercial', unlocode: 'CNNBO', annualTEU: 33350000, status: 'open' },
+  { id: 'szx', name: 'Shenzhen', country: 'China', countryCode: 'CN', lat: 22.51, lon: 113.90, size: 'major', type: 'commercial', unlocode: 'CNSZX', annualTEU: 29930000, status: 'open' },
+  { id: 'can', name: 'Guangzhou', country: 'China', countryCode: 'CN', lat: 22.61, lon: 113.61, size: 'major', type: 'commercial', unlocode: 'CNCAN', annualTEU: 24180000, status: 'open' },
+  { id: 'hkg', name: 'Hong Kong', country: 'Hong Kong', countryCode: 'HK', lat: 22.29, lon: 114.17, size: 'major', type: 'commercial', unlocode: 'HKHKG', annualTEU: 17990000, status: 'open' },
+  { id: 'tao', name: 'Qingdao', country: 'China', countryCode: 'CN', lat: 36.07, lon: 120.33, size: 'major', type: 'commercial', unlocode: 'CNTAO', annualTEU: 22550000, status: 'open' },
+  { id: 'tsn', name: 'Tianjin', country: 'China', countryCode: 'CN', lat: 38.97, lon: 117.72, size: 'major', type: 'commercial', unlocode: 'CNTSN', annualTEU: 21500000, status: 'open' },
+  { id: 'pus', name: 'Busan', country: 'South Korea', countryCode: 'KR', lat: 35.10, lon: 129.04, size: 'major', type: 'commercial', unlocode: 'KRPUS', annualTEU: 21690000, status: 'open' },
+  { id: 'khh', name: 'Kaohsiung', country: 'Taiwan', countryCode: 'TW', lat: 22.62, lon: 120.27, size: 'large', type: 'commercial', unlocode: 'TWKHH', annualTEU: 10400000, status: 'open' },
+  { id: 'tyo', name: 'Tokyo', country: 'Japan', countryCode: 'JP', lat: 35.65, lon: 139.77, size: 'large', type: 'commercial', unlocode: 'JPTYO', annualTEU: 4500000, status: 'open' },
+  { id: 'ynm', name: 'Yokohama', country: 'Japan', countryCode: 'JP', lat: 35.44, lon: 139.65, size: 'large', type: 'commercial', unlocode: 'JPYOK', annualTEU: 3000000, status: 'open' },
+  { id: 'ngo', name: 'Nagoya', country: 'Japan', countryCode: 'JP', lat: 35.05, lon: 136.88, size: 'large', type: 'commercial', unlocode: 'JPNGO', annualTEU: 3000000, status: 'open' },
+  { id: 'pkw', name: 'Port Klang', country: 'Malaysia', countryCode: 'MY', lat: 3.01, lon: 101.39, size: 'major', type: 'commercial', unlocode: 'MYPKG', annualTEU: 13730000, status: 'open' },
+  { id: 'lcb', name: 'Laem Chabang', country: 'Thailand', countryCode: 'TH', lat: 13.09, lon: 100.88, size: 'major', type: 'commercial', unlocode: 'THLCH', annualTEU: 8300000, status: 'open' },
+  { id: 'jkt', name: 'Jakarta (Tanjung Priok)', country: 'Indonesia', countryCode: 'ID', lat: -6.10, lon: 106.88, size: 'large', type: 'commercial', unlocode: 'IDJKT', annualTEU: 7200000, status: 'congested' },
+  { id: 'mnl', name: 'Manila', country: 'Philippines', countryCode: 'PH', lat: 14.54, lon: 120.98, size: 'large', type: 'commercial', unlocode: 'PHMNL', annualTEU: 4800000, status: 'open' },
+  { id: 'cmb', name: 'Colombo', country: 'Sri Lanka', countryCode: 'LK', lat: 6.95, lon: 79.87, size: 'large', type: 'commercial', unlocode: 'LKCMB', annualTEU: 7200000, status: 'open' },
+  { id: 'maa', name: 'Chennai', country: 'India', countryCode: 'IN', lat: 13.08, lon: 80.30, size: 'large', type: 'commercial', unlocode: 'INMAA', annualTEU: 2100000, status: 'open' },
+  { id: 'bom', name: 'Mumbai (JNPT)', country: 'India', countryCode: 'IN', lat: 18.95, lon: 72.95, size: 'major', type: 'commercial', unlocode: 'INNSA', annualTEU: 6000000, status: 'open' },
+  { id: 'syd', name: 'Sydney', country: 'Australia', countryCode: 'AU', lat: -33.86, lon: 151.21, size: 'large', type: 'commercial', unlocode: 'AUSYD', annualTEU: 2700000, status: 'open' },
+  { id: 'mel', name: 'Melbourne', country: 'Australia', countryCode: 'AU', lat: -37.84, lon: 144.94, size: 'large', type: 'commercial', unlocode: 'AUMEL', annualTEU: 2900000, status: 'open' },
+  { id: 'frm', name: 'Fremantle', country: 'Australia', countryCode: 'AU', lat: -32.06, lon: 115.75, size: 'medium', type: 'commercial', unlocode: 'AUFRE', annualTEU: 800000, status: 'open' },
+
+  // Europe
+  { id: 'rtm', name: 'Rotterdam', country: 'Netherlands', countryCode: 'NL', lat: 51.92, lon: 4.48, size: 'major', type: 'commercial', unlocode: 'NLRTM', annualTEU: 14800000, status: 'open' },
+  { id: 'ant', name: 'Antwerp-Bruges', country: 'Belgium', countryCode: 'BE', lat: 51.22, lon: 4.40, size: 'major', type: 'commercial', unlocode: 'BEANR', annualTEU: 12000000, status: 'open' },
+  { id: 'ham', name: 'Hamburg', country: 'Germany', countryCode: 'DE', lat: 53.57, lon: 9.95, size: 'major', type: 'commercial', unlocode: 'DEHAM', annualTEU: 8700000, status: 'open' },
+  { id: 'brm', name: 'Bremerhaven', country: 'Germany', countryCode: 'DE', lat: 53.56, lon: 8.58, size: 'large', type: 'commercial', unlocode: 'DEBRV', annualTEU: 5500000, status: 'open' },
+  { id: 'flx', name: 'Felixstowe', country: 'United Kingdom', countryCode: 'GB', lat: 51.96, lon: 1.33, size: 'large', type: 'commercial', unlocode: 'GBFXT', annualTEU: 3800000, status: 'open' },
+  { id: 'pir', name: 'Piraeus', country: 'Greece', countryCode: 'GR', lat: 37.94, lon: 23.62, size: 'major', type: 'commercial', unlocode: 'GRPIR', annualTEU: 5200000, status: 'open' },
+  { id: 'vlc', name: 'Valencia', country: 'Spain', countryCode: 'ES', lat: 39.45, lon: -0.31, size: 'large', type: 'commercial', unlocode: 'ESVLC', annualTEU: 5800000, status: 'open' },
+  { id: 'bcn', name: 'Barcelona', country: 'Spain', countryCode: 'ES', lat: 41.35, lon: 2.16, size: 'large', type: 'commercial', unlocode: 'ESBCN', annualTEU: 3500000, status: 'open' },
+  { id: 'alg', name: 'Algeciras', country: 'Spain', countryCode: 'ES', lat: 36.13, lon: -5.44, size: 'major', type: 'commercial', unlocode: 'ESALG', annualTEU: 5200000, status: 'open' },
+  { id: 'mrs', name: 'Marseille-Fos', country: 'France', countryCode: 'FR', lat: 43.31, lon: 5.38, size: 'large', type: 'commercial', unlocode: 'FRMRS', annualTEU: 1600000, status: 'open' },
+  { id: 'tng', name: 'Tanger Med', country: 'Morocco', countryCode: 'MA', lat: 35.88, lon: -5.51, size: 'major', type: 'commercial', unlocode: 'MATNG', annualTEU: 9000000, status: 'open' },
+
+  // Middle East / Indian Ocean
+  { id: 'jea', name: 'Jebel Ali (Dubai)', country: 'UAE', countryCode: 'AE', lat: 24.98, lon: 55.08, size: 'major', type: 'commercial', unlocode: 'AEJEA', annualTEU: 14100000, status: 'open' },
+  { id: 'psd', name: 'Port Said', country: 'Egypt', countryCode: 'EG', lat: 31.26, lon: 32.29, size: 'major', type: 'commercial', unlocode: 'EGPSD', annualTEU: 5000000, status: 'open' },
+  { id: 'jed', name: 'Jeddah', country: 'Saudi Arabia', countryCode: 'SA', lat: 21.47, lon: 39.17, size: 'major', type: 'commercial', unlocode: 'SAJED', annualTEU: 5500000, status: 'open' },
+  { id: 'dam', name: 'Dammam', country: 'Saudi Arabia', countryCode: 'SA', lat: 26.43, lon: 50.11, size: 'large', type: 'commercial', unlocode: 'SADAM', annualTEU: 1800000, status: 'open' },
+  { id: 'bnd', name: 'Bandar Abbas', country: 'Iran', countryCode: 'IR', lat: 27.19, lon: 56.28, size: 'large', type: 'commercial', unlocode: 'IRBND', annualTEU: 2200000, status: 'open' },
+  { id: 'ade', name: 'Aden', country: 'Yemen', countryCode: 'YE', lat: 12.79, lon: 44.99, size: 'large', type: 'commercial', unlocode: 'YEADE', annualTEU: 500000, status: 'restricted' },
+  { id: 'jib', name: 'Djibouti', country: 'Djibouti', countryCode: 'DJ', lat: 11.58, lon: 43.15, size: 'large', type: 'commercial', unlocode: 'DJJIB', annualTEU: 1000000, status: 'open' },
+  { id: 'sll', name: 'Salalah', country: 'Oman', countryCode: 'OM', lat: 16.94, lon: 54.00, size: 'large', type: 'commercial', unlocode: 'OMSLL', annualTEU: 4300000, status: 'open' },
+  { id: 'khi', name: 'Karachi', country: 'Pakistan', countryCode: 'PK', lat: 24.84, lon: 66.98, size: 'large', type: 'commercial', unlocode: 'PKKHI', annualTEU: 2500000, status: 'open' },
+
+  // Africa
+  { id: 'mom', name: 'Mombasa', country: 'Kenya', countryCode: 'KE', lat: -4.04, lon: 39.67, size: 'large', type: 'commercial', unlocode: 'KEMBA', annualTEU: 1500000, status: 'open' },
+  { id: 'dur', name: 'Durban', country: 'South Africa', countryCode: 'ZA', lat: -29.87, lon: 31.03, size: 'large', type: 'commercial', unlocode: 'ZADUR', annualTEU: 2900000, status: 'congested' },
+  { id: 'cpt', name: 'Cape Town', country: 'South Africa', countryCode: 'ZA', lat: -33.91, lon: 18.42, size: 'large', type: 'commercial', unlocode: 'ZACPT', annualTEU: 1000000, status: 'open' },
+  { id: 'los', name: 'Lagos (Apapa)', country: 'Nigeria', countryCode: 'NG', lat: 6.45, lon: 3.37, size: 'large', type: 'commercial', unlocode: 'NGLOS', annualTEU: 1200000, status: 'congested' },
+  { id: 'dkr', name: 'Dakar', country: 'Senegal', countryCode: 'SN', lat: 14.68, lon: -17.43, size: 'medium', type: 'commercial', unlocode: 'SNDKR', annualTEU: 450000, status: 'open' },
+  { id: 'abj', name: 'Abidjan', country: 'Ivory Coast', countryCode: 'CI', lat: 5.32, lon: -4.01, size: 'medium', type: 'commercial', unlocode: 'CIABJ', annualTEU: 1700000, status: 'open' },
+
+  // Americas
+  { id: 'lax', name: 'Los Angeles', country: 'USA', countryCode: 'US', lat: 33.73, lon: -118.27, size: 'major', type: 'commercial', unlocode: 'USLAX', annualTEU: 10700000, status: 'open' },
+  { id: 'lgb', name: 'Long Beach', country: 'USA', countryCode: 'US', lat: 33.75, lon: -118.22, size: 'major', type: 'commercial', unlocode: 'USLGB', annualTEU: 9400000, status: 'open' },
+  { id: 'nyc', name: 'New York / New Jersey', country: 'USA', countryCode: 'US', lat: 40.66, lon: -74.04, size: 'major', type: 'commercial', unlocode: 'USNYC', annualTEU: 9100000, status: 'open' },
+  { id: 'hou', name: 'Houston', country: 'USA', countryCode: 'US', lat: 29.73, lon: -94.87, size: 'major', type: 'commercial', unlocode: 'USHOU', annualTEU: 3800000, status: 'open' },
+  { id: 'sav', name: 'Savannah', country: 'USA', countryCode: 'US', lat: 32.08, lon: -81.10, size: 'large', type: 'commercial', unlocode: 'USSAV', annualTEU: 5900000, status: 'open' },
+  { id: 'van', name: 'Vancouver', country: 'Canada', countryCode: 'CA', lat: 49.30, lon: -123.11, size: 'large', type: 'commercial', unlocode: 'CAVAN', annualTEU: 3800000, status: 'open' },
+  { id: 'sea', name: 'Seattle / Tacoma', country: 'USA', countryCode: 'US', lat: 47.27, lon: -122.41, size: 'large', type: 'commercial', unlocode: 'USSEA', annualTEU: 3600000, status: 'open' },
+  { id: 'sts', name: 'Santos', country: 'Brazil', countryCode: 'BR', lat: -23.97, lon: -46.32, size: 'major', type: 'commercial', unlocode: 'BRSTS', annualTEU: 4500000, status: 'open' },
+  { id: 'bue', name: 'Buenos Aires', country: 'Argentina', countryCode: 'AR', lat: -34.59, lon: -58.37, size: 'large', type: 'commercial', unlocode: 'ARBUE', annualTEU: 1700000, status: 'open' },
+  { id: 'ctg', name: 'Cartagena', country: 'Colombia', countryCode: 'CO', lat: 10.39, lon: -75.51, size: 'large', type: 'commercial', unlocode: 'COCTG', annualTEU: 3200000, status: 'open' },
+  { id: 'pan', name: 'Panama City (Balboa)', country: 'Panama', countryCode: 'PA', lat: 8.93, lon: -79.57, size: 'large', type: 'commercial', unlocode: 'PAPAN', annualTEU: 3400000, status: 'open' },
+];
