@@ -45,13 +45,18 @@ export function useAIS() {
           const svc = new AISStreamService(
             streamKey,
             (v) => upsertVessel(v),
-            (status) => setConnectionStatus(status),
+            (status) => {
+              setConnectionStatus(status);
+              if (status === 'disconnected' && useMaritimeStore.getState().vessels.size === 0) {
+                useMaritimeStore.getState().loadMockVessels();
+              }
+            },
           );
           streamRef.current = svc;
           svc.connect();
           console.info('[AIS] Using direct AISStream connection');
         } else {
-          setConnectionStatus('demo');
+          useMaritimeStore.getState().loadMockVessels();
         }
       }
 

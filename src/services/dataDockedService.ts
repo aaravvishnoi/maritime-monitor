@@ -98,7 +98,9 @@ export class DataDockedService {
   private running = false;
   private hubIndex = 0;
 
-  private readonly BASE = 'https://datadocked.com/api/vessels_operations';
+  private readonly BASE = import.meta.env.DEV
+    ? 'https://datadocked.com/api/vessels_operations'
+    : '/api';
 
   constructor(apiKey: string, onVessel: OnVessel) {
     this.apiKey = apiKey;
@@ -107,13 +109,17 @@ export class DataDockedService {
 
   private async fetchHub(lat: number, lon: number, name: string): Promise<void> {
     try {
-      const url =
-        `${this.BASE}/get-vessels-by-area` +
-        `?latitude=${lat}&longitude=${lon}&circle_radius=100`;
+      const endpoint = import.meta.env.DEV
+        ? `${this.BASE}/get-vessels-by-area`
+        : `${this.BASE}/vessels`;
 
-      const res = await fetch(url, {
-        headers: { 'x-api-key': this.apiKey },
-      });
+      const url = `${endpoint}?latitude=${lat}&longitude=${lon}&circle_radius=100`;
+
+      const fetchOpts: RequestInit = import.meta.env.DEV
+        ? { headers: { 'x-api-key': this.apiKey } }
+        : {};
+
+      const res = await fetch(url, fetchOpts);
 
       if (!res.ok) {
         console.warn(`[DataDocked] ${name}: HTTP ${res.status}`);
