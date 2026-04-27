@@ -26,6 +26,10 @@ export function useAIS() {
     const streamKey = import.meta.env.VITE_AISSTREAM_API_KEY;
     const dockedKey = import.meta.env.VITE_DATADOCKED_API_KEY;
 
+    // Always seed with mock vessels immediately so the map is never empty.
+    // Live data from AISStream / DataDocked will overwrite them as it arrives.
+    useMaritimeStore.getState().loadMockVessels();
+
     void (async () => {
       // ── Try the local relay first ─────────────────────────────────────────
       const useRelay = await relayIsUp();
@@ -45,18 +49,11 @@ export function useAIS() {
           const svc = new AISStreamService(
             streamKey,
             (v) => upsertVessel(v),
-            (status) => {
-              setConnectionStatus(status);
-              if (status === 'disconnected' && useMaritimeStore.getState().vessels.size === 0) {
-                useMaritimeStore.getState().loadMockVessels();
-              }
-            },
+            (status) => setConnectionStatus(status),
           );
           streamRef.current = svc;
           svc.connect();
           console.info('[AIS] Using direct AISStream connection');
-        } else {
-          useMaritimeStore.getState().loadMockVessels();
         }
       }
 
